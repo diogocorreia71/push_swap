@@ -6,11 +6,11 @@
 #    By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 14:13:07 by diodos-s          #+#    #+#              #
-#    Updated: 2023/10/04 14:27:32 by diodos-s         ###   ########.fr        #
+#    Updated: 2023/10/04 14:41:55 by diodos-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = 
+SRC = push_swap.c
 
 NAME = push_swap
 
