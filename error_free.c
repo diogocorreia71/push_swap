@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:01:24 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 10:16:17 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/05 10:47:08 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	free_matrix(char **argv)
 	int	i;
 
 	i = -1;
-	if (argv == NULL || *argv == NULL)
+	if (!argv || !*argv)
 		return ;
 	while (argv[i])
 		free(argv[++i]);
@@ -29,7 +29,7 @@ void	free_stack(t_stack_node **stack)
 	t_stack_node	*temp;
 	t_stack_node	*curr;
 
-	if (stack == NULL)
+	if (!stack)
 		return ;
 	curr = *stack;
 	while (curr)
@@ -38,7 +38,7 @@ void	free_stack(t_stack_node **stack)
 		free(curr);
 		curr = temp;
 	}
-	*stack == NULL;
+	*stack = NULL;
 }
 
 void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
@@ -66,7 +66,7 @@ int	error_syntax(char *str_nbr)
 
 int	error_repetition(t_stack_node *a, int nbr)
 {
-	if (a == NULL)
+	if (!a)
 		return (0);
 	while (a)
 	{
