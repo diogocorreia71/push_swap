@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:01:24 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 09:55:58 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/05 10:16:17 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,19 @@ int	error_syntax(char *str_nbr)
 	{
 		if (!(*str_nbr >= '0' && *str_nbr <= '9'))
 			return (1);
+	}
+	return (0);
+}
+
+int	error_repetition(t_stack_node *a, int nbr)
+{
+	if (a == NULL)
+		return (0);
+	while (a)
+	{
+		if (a->value == nbr)
+			return (1);
+		a = a->next;
 	}
 	return (0);
 }
