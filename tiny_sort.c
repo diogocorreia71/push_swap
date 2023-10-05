@@ -6,11 +6,21 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:42:18 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 10:57:11 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/05 11:26:55 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	handle_five(t_stack_node **a, t_stack_node **b)
+{
+	while (stack_len(*a) > 3)
+	{
+		init_nodes(*a, *b);
+		finish_rotation(a, find_smallest(*a), 'a');
+		pb(b, a, false);
+	}
+}
 
 static t_stack_node	*find_highest(t_stack_node *stack)
 {

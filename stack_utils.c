@@ -6,11 +6,44 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:56:35 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 10:23:09 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/05 11:55:54 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_stack_node	*return_cheapest(t_stack_node *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
+}
+
+t_stack_node	*find_smallest(t_stack_node *stack)
+{
+	long					smallest;
+	t_stack_node	*smallest_node;
+
+	if (!stack)
+		return (NULL);
+	smallest = long_max;
+	while (stack)
+	{
+		if (stack->value < smallest)
+		{
+			smallest = stack->value;
+			smallest_node = stack;
+		}
+		stack = stack->next;
+	}
+	return (smallest_node);
+}
 
 t_stack_node	*find_last_node(t_stack_node *head)
 {
