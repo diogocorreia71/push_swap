@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:01:24 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 10:47:08 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/10 12:22:32 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	error_syntax(char *str_nbr)
 		return (1);
 	if ((*str_nbr == '+' || *str_nbr == '-') && !(str_nbr[1] >= '0' && str_nbr[1] <= '9'))
 		return (1);
-	while (++str_nbr)
+	while (*++str_nbr)
 	{
 		if (!(*str_nbr >= '0' && *str_nbr <= '9'))
 			return (1);
