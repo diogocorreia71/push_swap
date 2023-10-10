@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:30:38 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/10 08:34:47 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/10 08:55:03 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void	handle_five(t_stack_node **a, t_stack_node **b);
 void	init_nodes(t_stack_node *a, t_stack_node *b);
 t_stack_node	*find_smallest(t_stack_node *stack);
 void	push_swap(t_stack_node **a, t_stack_node **b);
+void	set_current_position(t_stack_node *stack);
 
 #endif
