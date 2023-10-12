@@ -6,27 +6,27 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 08:51:12 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 09:29:30 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/12 10:55:20 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	ft_atol(const char *str)
+static long	ft_atol(const char *str)
 {
 	long	res;
 	int		sign;
 	
 	res = 0;
 	sign = 1;
-	while (*str && (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r'))
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r')
 		str++;
 	if (*str == '+')
 		str++;
 	else if (*str == '-')
 	{
 		str++;
-		sign *= -1;
+		sign = -1;
 	}
 	while (*str >= '0' && *str <= '9')
 	{
@@ -52,7 +52,7 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 		if (error_repetition(*a, (int)nbr))
 			error_free(a, argv, flag_argc_2);
 		append_node(a, (int)nbr);
-		++i;
+		i++;
 	}
 	if (flag_argc_2)
 		free_matrix(argv);

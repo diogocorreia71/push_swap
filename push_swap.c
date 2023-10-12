@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:41:24 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/10 10:36:21 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/12 10:37:39 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		argv = ft_split(argv[1], ' ');
+		argv = ft_split_ps(argv[1], ' ');
 	stack_init(&a, argv + 1, argc == 2);
 	if (!stack_sorted(a))
 	{

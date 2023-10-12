@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:56:35 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 11:55:54 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/11 09:35:38 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	append_node(t_stack_node **stack, int nbr)
 	if (!stack)
 		return ;
 	node = malloc(sizeof(t_stack_node));
-	if (node == NULL)
+	if (!node)
 		return ;
 	node->next = NULL;
 	node->value = nbr;
