@@ -16,12 +16,12 @@ void	free_matrix(char **argv)
 {
 	int	i;
 
-	i = -1;
+	i = 0;
 	if (!argv || !*argv)
 		return ;
 	while (argv[i])
-		free(argv[++i]);
-	free(argv - 1);
+		free(argv[i++]);
+	free(argv);
 }
 
 void	free_stack(t_stack_node **stack)

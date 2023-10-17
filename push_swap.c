@@ -22,8 +22,8 @@ int	main(int argc, char **argv)
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
 		return (1);
 	else if (argc == 2)
-		argv = ft_split_ps(argv[1], ' ');
-	stack_init(&a, argv + 1, argc == 2);
+		argv = ft_split(argv[1], ' ');
+	stack_init(&a, argv + !(argc == 2), argc == 2);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)

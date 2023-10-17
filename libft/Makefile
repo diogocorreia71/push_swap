@@ -47,3 +47,5 @@ bonus:	${OBJS} ${OBJSB}
 	ar rcs ${NAME} ${OBJS} ${OBJSB} ${HEADER}
 
 .PHONY: all clean fclean re bonus
+
+.SILENT:

@@ -52,7 +52,7 @@ void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
 		if (error_repetition(*a, (int)nbr))
 			error_free(a, argv, flag_argc_2);
 		append_node(a, (int)nbr);
-		i++;
+		++i;
 	}
 	if (flag_argc_2)
 		free_matrix(argv);

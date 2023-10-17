@@ -63,6 +63,5 @@ void	append_node(t_stack_node **stack, int nbr);
 void	free_matrix(char **argv);
 void	free_stack(t_stack_node **stack);
 void	finish_rotation(t_stack_node **stack, t_stack_node *top_node, char stack_name);
-char	**ft_split_ps(char *str, char separator);
 
 #endif
