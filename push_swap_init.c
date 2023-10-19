@@ -12,10 +12,10 @@
 
 #include "push_swap.h"
 
-void	set_cheapest(t_stack_node *b)
+void	set_cheapest(t_node *b)
 {
 	long			best_match_value;
-	t_stack_node	*best_match_node;
+	t_node	*best_match_node;
 
 	if (!b)
 		return ;
@@ -32,7 +32,7 @@ void	set_cheapest(t_stack_node *b)
 	best_match_node->cheapest = true;
 }
 
-void	set_price(t_stack_node *a, t_stack_node *b)
+void	set_price(t_node *a, t_node *b)
 {
 	int	len_a;
 	int len_b;
@@ -52,10 +52,10 @@ void	set_price(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-static void	set_target_node(t_stack_node *a, t_stack_node *b)
+static void	set_target_node(t_node *a, t_node *b)
 {
-	t_stack_node	*current_a;
-	t_stack_node	*target_node;
+	t_node	*current_a;
+	t_node	*target_node;
 	long			best_match_index;
 
 	while (b)
@@ -79,7 +79,7 @@ static void	set_target_node(t_stack_node *a, t_stack_node *b)
 	}
 }
 
-void	set_current_position(t_stack_node *stack)
+void	set_current_position(t_node *stack)
 {
 	int		i;
 	int		mid;
@@ -100,7 +100,7 @@ void	set_current_position(t_stack_node *stack)
 	}
 }
 
-void	init_nodes(t_stack_node *a, t_stack_node *b)
+void	init_nodes(t_node *a, t_node *b)
 {
 	set_current_position(a);
 	set_current_position(b);

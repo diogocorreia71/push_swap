@@ -14,8 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	t_stack_node	*a;
-	t_stack_node	*b;
+	t_node	*a;
+	t_node	*b;
 
 	a = NULL;
 	b = NULL;

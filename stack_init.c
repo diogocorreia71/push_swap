@@ -36,7 +36,7 @@ static long	ft_atol(const char *str)
 	return (sign * res);
 }
 
-void	stack_init(t_stack_node **a, char **argv, bool flag_argc_2)
+void	stack_init(t_node **a, char **argv, bool flag_argc_2)
 {
 	long	nbr;
 	int			i;

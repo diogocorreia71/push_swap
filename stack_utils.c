@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-t_stack_node	*return_cheapest(t_stack_node *stack)
+t_node	*return_cheapest(t_node *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -25,10 +25,10 @@ t_stack_node	*return_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-t_stack_node	*find_smallest(t_stack_node *stack)
+t_node	*find_smallest(t_node *stack)
 {
 	long					smallest;
-	t_stack_node	*smallest_node;
+	t_node	*smallest_node;
 
 	if (!stack)
 		return (NULL);
@@ -45,7 +45,7 @@ t_stack_node	*find_smallest(t_stack_node *stack)
 	return (smallest_node);
 }
 
-t_stack_node	*find_last_node(t_stack_node *head)
+t_node	*find_last_node(t_node *head)
 {
 	if (!head)
 		return (NULL);
@@ -54,14 +54,14 @@ t_stack_node	*find_last_node(t_stack_node *head)
 	return (head);
 }
 
-void	append_node(t_stack_node **stack, int nbr)
+void	append_node(t_node **stack, int nbr)
 {
-	t_stack_node	*node;
-	t_stack_node	*last_node;
+	t_node	*node;
+	t_node	*last_node;
 
 	if (!stack)
 		return ;
-	node = malloc(sizeof(t_stack_node));
+	node = malloc(sizeof(t_node));
 	if (!node)
 		return ;
 	node->next = NULL;
@@ -79,7 +79,7 @@ void	append_node(t_stack_node **stack, int nbr)
 	}
 }
 
-int	stack_len(t_stack_node *stack)
+int	stack_len(t_node *stack)
 {
 	int	count;
 	

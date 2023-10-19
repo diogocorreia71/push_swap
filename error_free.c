@@ -24,10 +24,10 @@ void	free_matrix(char **argv)
 	free(argv);
 }
 
-void	free_stack(t_stack_node **stack)
+void	free_stack(t_node **stack)
 {
-	t_stack_node	*temp;
-	t_stack_node	*curr;
+	t_node	*temp;
+	t_node	*curr;
 
 	if (!stack)
 		return ;
@@ -41,7 +41,7 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void	error_free(t_stack_node **a, char **argv, bool flag_argc_2)
+void	error_free(t_node **a, char **argv, bool flag_argc_2)
 {
 	free_stack(a);
 	if (flag_argc_2)
@@ -64,7 +64,7 @@ int	error_syntax(char *str_nbr)
 	return (0);
 }
 
-int	error_repetition(t_stack_node *a, int nbr)
+int	error_repetition(t_node *a, int nbr)
 {
 	if (!a)
 		return (0);

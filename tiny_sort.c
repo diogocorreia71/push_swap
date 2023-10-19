@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	handle_five(t_stack_node **a, t_stack_node **b)
+void	handle_five(t_node **a, t_node **b)
 {
 	while (stack_len(*a) > 3)
 	{
@@ -22,10 +22,10 @@ void	handle_five(t_stack_node **a, t_stack_node **b)
 	}
 }
 
-static t_stack_node	*find_highest(t_stack_node *stack)
+static t_node	*find_highest(t_node *stack)
 {
 	int						highest;
-	t_stack_node	*highest_node;
+	t_node	*highest_node;
 	
 	if (!stack)
 		return (NULL);
@@ -42,9 +42,9 @@ static t_stack_node	*find_highest(t_stack_node *stack)
 	return (highest_node);
 }
 
-void	tiny_sort(t_stack_node **a)
+void	tiny_sort(t_node **a)
 {
-	t_stack_node	*highest_node;
+	t_node	*highest_node;
 	highest_node = find_highest(*a);
 	if (*a == highest_node)
 		ra(a, false);
@@ -54,7 +54,7 @@ void	tiny_sort(t_stack_node **a)
 		sa(a, false);
 }
 
-bool	stack_sorted(t_stack_node *stack)
+bool	stack_sorted(t_node *stack)
 {
 	if (!stack)
 		return (1);
