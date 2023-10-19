@@ -22,7 +22,7 @@ void	handle_five(t_node **a, t_node **b)
 	}
 }
 
-static t_node	*find_highest(t_node *stack)
+t_node	*find_highest(t_node *stack)
 {
 	int						highest;
 	t_node	*highest_node;

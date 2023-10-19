@@ -52,7 +52,7 @@ void	set_price(t_node *a, t_node *b)
 	}
 }
 
-static void	set_target_node(t_node *a, t_node *b)
+void	set_target_node(t_node *a, t_node *b)
 {
 	t_node	*current_a;
 	t_node	*target_node;

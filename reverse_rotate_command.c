@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static void	reverse_rotate(t_node **stack)
+void	reverse_rotate(t_node **stack)
 {
 	t_node	*last;
 	int					len;

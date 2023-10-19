@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static void	rotate_both(t_node **a, t_node **b, t_node *cheapest_node)
+void	rotate_both(t_node **a, t_node **b, t_node *cheapest_node)
 {
 	while (*a != cheapest_node->target_node && *b != cheapest_node)
 		rr(a, b, false);
@@ -20,7 +20,7 @@ static void	rotate_both(t_node **a, t_node **b, t_node *cheapest_node)
 	set_current_position(*b);
 }
 
-static void	reverse_rotate_both(t_node **a, t_node **b, t_node *cheapest_node)
+void	reverse_rotate_both(t_node **a, t_node **b, t_node *cheapest_node)
 {
 	while (*a != cheapest_node->target_node && *b != cheapest_node)
 		rrr(a, b, false);
@@ -49,7 +49,7 @@ void	finish_rotation(t_node **stack, t_node *top_node, char stack_name)
 	}
 }
 
-static void	move_nodes(t_node **a, t_node **b)
+void	move_nodes(t_node **a, t_node **b)
 {
 	t_node	*cheapest_node;
 
