@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:56:35 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/11 09:35:38 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:37:36 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ t_node	*return_cheapest(t_node *stack)
 
 t_node	*find_smallest(t_node *stack)
 {
-	long					smallest;
+	long	smallest;
 	t_node	*smallest_node;
 
 	if (!stack)
 		return (NULL);
-	smallest = long_max;
+	smallest = LONG_MAX;
 	while (stack)
 	{
 		if (stack->value < smallest)
@@ -82,7 +82,7 @@ void	append_node(t_node **stack, int nbr)
 int	stack_len(t_node *stack)
 {
 	int	count;
-	
+
 	if (!stack)
 		return (0);
 	count = 0;

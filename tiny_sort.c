@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 09:42:18 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 11:26:55 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:38:26 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ void	handle_five(t_node **a, t_node **b)
 
 t_node	*find_highest(t_node *stack)
 {
-	int						highest;
+	int		highest;
 	t_node	*highest_node;
-	
+
 	if (!stack)
 		return (NULL);
-	highest = int_min;
+	highest = INT_MIN;
 	while (stack)
 	{
 		if (stack->value > highest)
@@ -45,6 +45,7 @@ t_node	*find_highest(t_node *stack)
 void	tiny_sort(t_node **a)
 {
 	t_node	*highest_node;
+
 	highest_node = find_highest(*a);
 	if (*a == highest_node)
 		ra(a, false);

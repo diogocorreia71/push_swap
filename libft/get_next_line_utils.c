@@ -6,21 +6,11 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 12:47:47 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/09/28 14:55:36 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:34:05 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*new_stash_aux(char *new_stash)
-{
-	if (new_stash[0] == '\0')
-	{
-		free (new_stash);
-		new_stash = 0;
-	}
-	return (new_stash);
-}
 
 char	*new_stash(char *stash)
 {
@@ -67,7 +57,7 @@ char	*extract_line(char *stash)
 		return (NULL);
 	i = 0;
 	while (stash[i] && stash[i] != '\n')
-	{	
+	{
 		str[i] = stash[i];
 		i++;
 	}

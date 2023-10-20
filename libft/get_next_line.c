@@ -6,11 +6,21 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 12:21:56 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/09/20 09:34:32 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:32:04 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+char	*new_stash_aux(char *new_stash)
+{
+	if (new_stash[0] == '\0')
+	{
+		free (new_stash);
+		new_stash = 0;
+	}
+	return (new_stash);
+}
 
 char	*read_and_stash(int fd, char *stash)
 {

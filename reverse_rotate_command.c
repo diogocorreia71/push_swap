@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 11:05:19 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/05 11:14:38 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:08:27 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	reverse_rotate(t_node **stack)
 {
 	t_node	*last;
-	int					len;
+	int		len;
 
 	len = stack_len(*stack);
 	if (!stack || !*stack || len == 1)

@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 11:46:56 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/09/22 10:31:10 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:31:46 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # include <ctype.h>
 # include <string.h>
 # include <signal.h>
-
 
 typedef struct s_list
 {
@@ -88,6 +87,6 @@ char		*found_new_line(char *s);
 size_t		ft_strlen_gnl(char *s);
 char		*extract_line(char *stash);
 char		*new_stash(char *stash);
-
+char		*new_stash_aux(char *new_stash);
 
 #endif

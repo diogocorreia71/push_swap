@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:30:38 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/12 10:37:31 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:37:18 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,20 @@
 
 typedef struct s_node
 {
-	int	value;
-	int current_position;
-	int final_index;
-	int push_price;
-	bool above_median;
-	bool cheapest;
-	struct s_node *target_node;
-	struct s_node *next;
-	struct s_node *prev;
+	int				value;
+	int				current_position;
+	int				final_index;
+	int				push_price;
+	bool			above_median;
+	bool			cheapest;
+	struct s_node	*target_node;
+	struct s_node	*next;
+	struct s_node	*prev;
 }	t_node;
 
-# define int_max 2147483647
-# define int_min -2147483648
-# define long_max +9223372036854775807
+# define INT_MAX 2147483647
+# define INT_MIN -2147483648
+# define LONG_MAX +9223372036854775807
 
 void	stack_init(t_node **a, char **argv, bool flag_argc_2);
 bool	stack_sorted(t_node *stack);

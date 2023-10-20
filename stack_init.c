@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 08:51:12 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/12 10:55:20 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/10/20 11:37:00 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ long	ft_atol(const char *str)
 {
 	long	res;
 	int		sign;
-	
+
 	res = 0;
 	sign = 1;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r')
+	while (*str == ' ' || *str == '\t' || *str == '\n'
+		|| *str == '\v' || *str == '\f' || *str == '\r')
 		str++;
 	if (*str == '+')
 		str++;
@@ -39,7 +40,7 @@ long	ft_atol(const char *str)
 void	stack_init(t_node **a, char **argv, bool flag_argc_2)
 {
 	long	nbr;
-	int			i;
+	int		i;
 
 	i = 0;
 	while (argv[i])
@@ -47,7 +48,7 @@ void	stack_init(t_node **a, char **argv, bool flag_argc_2)
 		if (error_syntax(argv[i]))
 			error_free(a, argv, flag_argc_2);
 		nbr = ft_atol(argv[i]);
-		if (nbr > int_max || nbr < int_min)
+		if (nbr > INT_MAX || nbr < INT_MIN)
 			error_free(a, argv, flag_argc_2);
 		if (error_repetition(*a, (int)nbr))
 			error_free(a, argv, flag_argc_2);
