@@ -12,21 +12,24 @@
 
 #include "push_swap.h"
 
-void	swap(t_node **head)
+void swap(t_node **head)
 {
-	int	len;
+    if (!head || !*head || !(*head)->next)
+        return;
 
-	len = stack_len(*head);
-	if (!*head || !head || len == 1)
-		return ;
-	*head = (*head)->next;
-	(*head)->prev->prev = *head;
-	(*head)->prev->next = (*head)->next;
-	if ((*head)->next)
-		(*head)->next->prev = (*head)->prev;
-	(*head)->next = (*head)->prev;
-	(*head)->prev = NULL;
+    t_node *current = *head;
+    t_node *nextNode = current->next;
+
+    current->next = nextNode->next;
+    if (nextNode->next)
+        nextNode->next->prev = current;
+
+    nextNode->next = current;
+    current->prev = nextNode;
+
+    *head = nextNode;
 }
+
 
 void	ss(t_node **a, t_node **b, bool checker)
 {
