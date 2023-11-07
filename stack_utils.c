@@ -65,6 +65,7 @@ void	append_node(t_node **stack, int nbr)
 	if (!node)
 		return ;
 	node->next = NULL;
+	node->cheapest = false;
 	node->value = nbr;
 	if (!*stack)
 	{
