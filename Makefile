@@ -6,11 +6,13 @@
 #    By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/04 14:13:07 by diodos-s          #+#    #+#              #
-#    Updated: 2023/10/10 15:01:01 by diodos-s         ###   ########.fr        #
+#    Updated: 2023/11/09 09:01:40 by diodos-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = ${wildcard *.c}
+SRC = error_free.c push_command.c push_swap_command.c push_swap_init.c push_swap.c\
+		reverse_rotate_command.c rotate_command.c stack_init.c stack_utils.c\
+		swap_command.c tiny_sort.c
 
 NAME = push_swap
 
