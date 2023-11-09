@@ -6,7 +6,7 @@
 /*   By: diodos-s <diodos-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 14:30:38 by diodos-s          #+#    #+#             */
-/*   Updated: 2023/10/20 11:37:18 by diodos-s         ###   ########.fr       */
+/*   Updated: 2023/11/09 09:02:30 by diodos-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "libft/libft.h"
 # include <stdbool.h>
+# include <limits.h>
 
 typedef struct s_node
 {
@@ -28,10 +29,6 @@ typedef struct s_node
 	struct s_node	*next;
 	struct s_node	*prev;
 }	t_node;
-
-# define INT_MAX 2147483647
-# define INT_MIN -2147483648
-# define LONG_MAX +9223372036854775807
 
 void	stack_init(t_node **a, char **argv, bool flag_argc_2);
 bool	stack_sorted(t_node *stack);
